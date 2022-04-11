@@ -8,10 +8,10 @@ The following people participated in a SQL hackathon run by [Numpy Ninja](https:
 
 This team is a group of Software Development Engineers In Test (SDET) who participated in this hackathon:
 
-[Magdaline Divya](https://github.com/magdadiv)
-[Pallavi Ramam](https://github.com/pramam)
-[Rajalaxmi Jena](https://github.com/rajalaxmijena91)
-[Sharmila Ramesh](https://github.com/RameshSharmila)
+[Magdaline Divya](https://github.com/magdadiv),
+[Pallavi Ramam](https://github.com/pramam),
+[Rajalaxmi Jena](https://github.com/rajalaxmijena91),
+[Sharmila Ramesh](https://github.com/RameshSharmila),
 [Sridevi Chandrasekaran](https://github.com/Sri-Sundar)
 
 This website documents what we did and what we learned.

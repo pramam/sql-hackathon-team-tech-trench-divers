@@ -26,7 +26,7 @@ However, we can share our presentation and blogs that we wrote.
 
 ## The Presentation
 
-Head over to the [slide deck]() to see our presentation.
+Head over to the [slide deck](https://docs.google.com/presentation/d/1myrL5XGYapWYhTagoMnyV0x66Ms0131LCL788OKqMB8/edit?usp=sharing) to see our presentation.
 
 ## Blog posts
 

@@ -36,4 +36,4 @@ Head over to the [slide deck]() to see our presentation.
 
 2. [Joins in PostgreSQL](./docs/blog/joins-in-postgresql/index.md), Rajalaxmi Jena
 
-3. 3. [PostgreSQL Transactions](./docs/blog/postgresql-transactions/), Magadaline Divya, Rajalaxmi Jena, Sridevi Chandrasekaran
+3. [PostgreSQL Transactions](./docs/blog/postgresql-transactions/), Magadaline Divya, Rajalaxmi Jena, Sridevi Chandrasekaran

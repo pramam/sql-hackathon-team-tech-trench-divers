@@ -68,7 +68,7 @@ update employee set salary=22000 where emp_id=1;
 select e.emp_id,d.dept_id,e.salary
 from employee e
 inner join department d
-on 	e.emp_id=d.dept_id
+on e.emp_id=d.dept_id
 where e.emp_id=1;
 
 Commit;
@@ -81,7 +81,7 @@ After executing the COMMIT statement, PostgreSQL also guarantees that the change
 
 In the below example , the transaction will Rollback.Rollback will undo the change of current transaction. 
 
-![update and select](./images/after-rollback.png)
+![update and select](./images/after-rollback.1.png)
 
 This is how the transaction block works using BEGIN , COMMIT , ROLLBACK. 
 

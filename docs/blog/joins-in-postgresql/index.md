@@ -18,38 +18,46 @@ Here is how you  create the table :
 
 Employee Table:
 
+```
 create table employee
 ( emp_ID int primary key
 , FirstName varchar(50) not null
 , SALARY int
 ,Gender char(1)
 );
+```
 
 Here is how you insert the into the table:
 
+```
 Insert into employee values(1,'Sara',5000,'F');
 Insert into employee values(2,'Michael',7000,'M');
 Insert into employee values(3,'Abhishek',10000,'M');
 Insert into employee values(4,'Madhuri',12000,'F');
 Insert into employee values(5,'Tim',15000,'M');
 Insert into employee values(6,'Rekha',18000,'F');
+```
 
 Department Table :
 
+```
 create table department
 ( dept_id int primary key,
   emp_id int ,
   DEPT_NAME varchar(50)
 );
+```
 
 Here is how you insert the into the table:
 
+```
 Insert into department values(1,1,'Finance');
 Insert into department values(2,2,'IT');
 Insert into department values(3,3,'HR');
 Insert into department values(4,4,'Marketing');
 Insert into department values(5,20,'Customer Service');
 Insert into department values(6,21,'Hardware');
+```
 
 
 INNER JOIN:-

@@ -74,6 +74,20 @@ where e.emp_id=1;
 Commit;
 ~~~
 
+Steps to execute the transaction above,
+
+**Step 1:**
+
+![update and select](./images/begin.png)
+
+**Step 2:**
+
+![update and select](./images/transaction.png)
+
+**Step 3:**
+
+![update and select](./images/commit.png)
+
 ![update and select](./images/update.png)
 
 

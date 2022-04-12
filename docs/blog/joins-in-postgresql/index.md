@@ -40,3 +40,34 @@ ON employee.emp_id = department.emp_id;
 ![innerjoin](./images/inner-join.png)
 
 
+
+LEFT JOIN:-
+
+LEFT JOIN returns all rows from the left table with corresponding rows from the right
+table. If there's no matching row, NULL s are returned as values from the second
+table.
+
+
+
+Example:-
+
+```
+select employee.FirstName , department.dept_name
+from employee
+left join department
+on employee.emp_id=department.emp_id;
+```
+
+![leftjoin](./images/left-join.png)
+
+RIGHT JOIN:-
+
+RIGHT JOIN returns all rows from the right table with corresponding rows from the
+left table. If there's no matching row, NULL s are returned as values from the left
+table.
+
+
+
+
+
+

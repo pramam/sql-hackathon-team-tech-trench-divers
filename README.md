@@ -34,4 +34,4 @@ Head over to the [slide deck]() to see our presentation.
 
 1. [Relationship between foreign key and primary key](./docs/blog/relationship-fk-pk/index.md), Pallavi Ramam
 
-2. [Joins in PostgreSQL] (./docs/blog/joins-in-postgresql/index.md), Rajalaxmi Jena
+2. [Joins in PostgreSQL](./docs/blog/joins-in-postgresql/index.md), Rajalaxmi Jena

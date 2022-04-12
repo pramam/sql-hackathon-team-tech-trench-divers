@@ -2,7 +2,7 @@
 
 Join is used to combine data or rows from one or more tables based on a common field between them. These common fields are generally the Primary key of the first table and Foreign key of other tables.
 
-There are 4 types of joins in PostgreSQL:
+**There are 4 types of joins in PostgreSQL:-**
 
 1.Inner Join
 
@@ -14,9 +14,9 @@ There are 4 types of joins in PostgreSQL:
 
 5.Cross Join
 
-Here is how you  create the table :
+**Here is how you  create the table :-**
 
-Employee Table:
+**Employee Table:-**
 
 ```
 create table employee
@@ -27,7 +27,7 @@ create table employee
 );
 ```
 
-Here is how you insert the into the table:
+**Here is how you insert the into the table:-**
 
 ```
 Insert into employee values(1,'Sara',5000,'F');
@@ -38,7 +38,7 @@ Insert into employee values(5,'Tim',15000,'M');
 Insert into employee values(6,'Rekha',18000,'F');
 ```
 
-Department Table :
+**Department Table :-**
 
 ```
 create table department
@@ -48,7 +48,7 @@ create table department
 );
 ```
 
-Here is how you insert the into the table:
+**Here is how you insert the into the table:-**
 
 ```
 Insert into department values(1,1,'Finance');
@@ -60,23 +60,28 @@ Insert into department values(6,21,'Hardware');
 ```
 
 
-INNER JOIN:-
+**INNER JOIN:-**
 
 JOIN (or explicitly INNER JOIN ) returns rows that have matching values in both
 tables.
 
 
-Here is an employee table
+**Here is an employee table:-**
+
 
 ![employee table](./images/employee-table.png)
 
 
-Here is the department table
+
+
+
+**Here is the department table:-**
+
 
 ![department table](./images/department-table.png)
 
 
-Example:
+**Example:-**
 
 ```
 SELECT employee.Firstname, department.dept_name
@@ -89,7 +94,7 @@ ON employee.emp_id = department.emp_id;
 
 
 
-LEFT JOIN:-
+**LEFT JOIN:-**
 
 
 LEFT JOIN returns all rows from the left table with corresponding rows from the right
@@ -98,7 +103,7 @@ table.
 
 
 
-Example:-
+**Example:-**
 
 ```
 select employee.FirstName , department.dept_name
@@ -110,13 +115,13 @@ on employee.emp_id=department.emp_id;
 ![leftjoin](./images/left-join.png)
 
 
-RIGHT JOIN:-
+**RIGHT JOIN:-**
 
 RIGHT JOIN returns all rows from the right table with corresponding rows from the
 left table. If there's no matching row, NULL s are returned as values from the left
 table.
 
-Example :
+**Example :-**
 
 ```
 SELECT city.name, country.name
@@ -129,13 +134,13 @@ FROM city, country;
 ![rightjoin](./images/right-join.png)
 
 
-FULL JOIN:-
+**FULL JOIN:-**
 
 FULL JOIN (or explicitly FULL OUTER JOIN ) returns all rows from both tables – if
 there's no matching row in the second table, NULL s are returned.
 
 
-Example:
+**Example:-**
 
 ```
 select employee.FirstName , department.dept_name
@@ -149,12 +154,12 @@ on employee.emp_id=department.emp_id;
 
 
 
-CROSS JOIN:-
+**CROSS JOIN:-**
 
 CROSS JOIN returns all possible combinations of rows from both tables. There are
 two syntaxes available.
 
-Example:
+**Example:-**
 
 ```
 select employee.FirstName , department.dept_name

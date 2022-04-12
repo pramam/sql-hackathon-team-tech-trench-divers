@@ -79,9 +79,9 @@ Commit;
 
 After executing the COMMIT statement, PostgreSQL also guarantees that the change will be durable.
 
-In the below example , the transaction will Rollback.Rollback will undo the change of current transaction. 
+In the below example , Rollback will undo the change of current transaction. 
 
-![update and select](./images/after-rollback.1.png)
+![update and select](./images/rollback.1.png)
 
 This is how the transaction block works using BEGIN , COMMIT , ROLLBACK. 
 

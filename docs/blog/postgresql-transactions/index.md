@@ -58,11 +58,30 @@ Insert into department values(6,21,'Hardware');
 
 **Let's see an example** 
 
-In the below example the transaction will update and select.
+In the below example , the transaction will Update Employee Salary and Select the data.
+
+~~~
+Begin;
+							
+update employee set salary=22000 where emp_id=1;
+							
+select e.emp_id,d.dept_id,e.salary
+from employee e
+inner join department d
+on 	e.emp_id=d.dept_id
+where e.emp_id=1;
+
+Commit;
+~~~
+
+![update and select](./images/update.png)
 
 
+After executing the COMMIT statement, PostgreSQL also guarantees that the change will be durable.
 
-After executing the COMMIT statement, PostgreSQL also guarantees that the change will be durable
+In the below example , the transaction will Rollback.Rollback will undo the change of current transaction. 
 
+![update and select](./images/after-rollback.png)
 
-To roll back or undo the change of the current transaction, 
+This is how the transaction block works using BEGIN , COMMIT , ROLLBACK. 
+

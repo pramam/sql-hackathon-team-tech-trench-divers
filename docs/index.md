@@ -14,19 +14,13 @@ This website documents what we did and what we learned.
 
 ## Overview
 
-A PostgreSQL database schema consisting of 14 tables with some populated data was given to us. This database(Learning Management System-DB, LMS_DB) is modeled on how Numpy Ninja runs-- It has programs for Data Science/Machine Learning, and SDETs, with batches of professionals in each program.
-
-Take a look at the Entity Relationship Diagram (ER-Diagram) below:
-
-![ER Diagram](./images/LMSERD.png)
+A PostgreSQL database schema consisting of 14 tables with some populated data was given to us. This database is modeled on how Numpy Ninja runs-- It has programs for Data Science/Machine Learning, and SDETs, with batches of professionals in each program.
 
 We were given 90 queries to write, as a team, in the span of **exactly** one week, from a Tuesday evening to the next Tuesday evening. Bonus points would be given for writing extra queries and following Agile Methodologies.
 
-## PostgreSQL Installation and Setup
+We cannot share more details about the database schema or the questions that were asked and our answers as that is proprietary.
 
-## Answers to the Queries
-
-The answers are [here](./sql/queries.sql).
+However, we can share our presentation and blogs that we wrote.
 
 ## The Presentation
 
@@ -35,3 +29,5 @@ Head over to the [slide deck]() to see our presentation.
 ## Blog posts
 
 1. [Relationship between foreign key and primary key](./blog/relationship-fk-pk/index.md), Pallavi Ramam
+
+2. [Joins in PostgreSQL] (./blog/joins-in-postgresql/index.md), Rajalaxmi Jena

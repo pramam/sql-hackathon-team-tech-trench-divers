@@ -24,7 +24,9 @@ Here is an employee table
 
 ![employee table](./images/employee-table-inner-and-left-join.png)
 
+
 Here is the department table
+
 ![department table](./images/department-table-inner-and-left-join.png)
 
 

@@ -2,38 +2,85 @@
 
 How do a foreign key(FK) and a primary key(PK) relate to each other?
 
-1. Here is a snippet of 2 tables, `tbl_lms_program` and `tbl_lms_batch` from the Entity-Relationship Diagram:
+1. Let us start by creating 2 tables: An `employee` table and a `department` table.
 
-![ER Diagram tbl_lms_program and tbl_lms_batch](./images/ER_diagram_snippet.png)
+**Let us create the `employee` table:**
 
-2. _tbl_lms_program_ has primary key(PK) `program_id`:
+```
+create table employee
+( emp_id int primary key,
+  firstname varchar(50) not null,
+  salary int,
+  gender char(1)
+);
+```
 
-`select * from tbl_lms_program;`
+Let us add some data to the `employee` table by running the following queries:
 
-![tbl_lms_program](./images/tbl_lms_program.png)
+```
+insert into employee values(1,'Sara',5000,'F');
+insert into employee values(2,'Michael',7000,'M');
+insert into employee values(3,'Abhishek',10000,'M');
+insert into employee values(4,'Madhuri',12000,'F');
+insert into employee values(5,'Tim',15000,'M');
+insert into employee values(6,'Rekha',18000,'F');
+```
 
-3. _tbl_lms_batch_ has PK `batch_id`, and wants to reference the PK `program_id` from _tbl_lms_program_. This is created as a foreign key (FK) in _tbl_lms_batch_. It can be named `program_id` or any other name, in our case it is called `batch_program_id`. This would be a FK in this table as it is a PK in another table.
+`select * from employee;` :
+![employee-table](./images/employee-table.png)
 
-`select * from tbl_lms_batch;`
+**Let us create the `department` table:**
 
-![tbl_lms_batch](./images/tbl_lms_batch.png)
+```
+create table department
+( dept_id int primary key,
+  employee_id int references employee(emp_id) ,
+  dept_name varchar(50)
+);
+```
 
-4. _tbl_lms_program_ is the parent table. `program_id` here is the PK. _tbl_lms_batch_ is the child table. `program_id` here(called `batch_program_id`) is the FK.
+Let us add some data to the `department` table by running the following queries:
 
-5. The name of the FK can be the same name as in the parent table, or it could be a different name.
+```
+insert into department values(1,1,'Finance');
+insert into department values(2,2,'IT');
+insert into department values(3,3,'HR');
+insert into department values(4,4,'Marketing');
+```
 
-6. If you want to see the foreign key mapping in tbl_lms_batch: in pgadmin4 expand this table
+`select * from department;` gives:
 
-![tbl_lms_batch in pgadmin4](./images/tbl_lms_batch_pgadmin4.png)
+![department-table](./images/department-table.png)
 
-- See Constraints --> `batch_fk`
-- Right click on it. Go to Properties and Columns, it will show the PK <-> FK relationship.
+2. Table `employee` has primary key(PK) `emp_id`:
 
-![batch_fk](./images/batch_fk.png)
+![employee-pk](./images/employee-constraints.png)
 
-We see here that `tbl_lms_program.program_id` is called **batch_program_id** in `tbl_lms_batch`. **`batch_program_id` is a FK**.
+3. Table `department` has primary key(PK) `dept_id` and foreign key(FK) `employee_id`.
 
-7. Query to show all foreign keys in a database in PostgreSQL:
+To see this go to this Database -> Schemas -> Public -> Tables -> department and expand constraints:
+
+![department-constraints](./images/department-constraints.png)
+
+4. Note that `department.employee_id` actually references `employee.emp_id`. It has been renamed from `emp_id` in employee table to `employee_id` in department table.
+
+From the Constraints in Step 3, right click on `department_employee_id_fkey` :
+
+![department-fk](./images/department-table-fk-pk-relationship.png)
+
+5. Right click and select "Properties":
+
+![department-properties](./images/department-table-properties-fk.png)
+
+6. Select "Columns" in the tab to see the relationship between the FK in `department` and in the `employee` table that it references:
+
+![fk-pk-relationship](./images/department-table-fk-pk-relationship.png)
+
+7. `employee` is the parent table. `emp_id` is the PK in that table. `department` is the child table. `employee.emp_id` here(called `employee_id`) is the FK.
+
+8. The name of the FK can be the same name as in the parent table, or it could be a different name. In our case it has a different name.
+
+9. Query to show all foreign keys in a database in PostgreSQL:
 
 ```
 --Query to show all foreign keys fk in database
@@ -46,6 +93,19 @@ AND    connamespace = 'public'::regnamespace
 ORDER  BY conrelid::regclass::text, contype DESC;
 ```
 
-8. Here is a snippet from the above query showing the details of _tbl_lms_batch_:
+Running this query gives us:
 
-![Foreign Keys in tbl_lms_batch](./images/fk_details_tbl_lms_batch.png)
+![all-fks-in-db](./images/all-fks-in-db.png)
+
+10. Now, just for kicks, if we try to create a record in `department` for an employee that doesn't exist, we will get an error:
+
+```
+insert into department values(5,20,'Customer Service');
+```
+
+Output:
+![error](./images/fk-error.png)
+
+Why do we get this error? We're trying to insert `employee_id` 20 into the `department` table, but that id doesn't exist in the `employee` table.
+
+I hope this gave you a good idea about how primary keys and foreign keys work.

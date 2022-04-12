@@ -27,6 +27,7 @@ insert into employee values(6,'Rekha',18000,'F');
 ```
 
 `select * from employee;` :
+
 ![employee-table](./images/employee-table.png)
 
 **Let us create the `department` table:**

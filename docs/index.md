@@ -12,6 +12,8 @@ This team is a group of Software Development Engineers In Test (SDET) who partic
 
 This website documents what we did and what we learned.
 
+[**_Github repo_**](https://github.com/pramam/sql-hackathon-team-tech-trench-divers)
+
 ## Overview
 
 A PostgreSQL database schema consisting of 14 tables with some populated data was given to us. This database is modeled on how Numpy Ninja runs-- It has programs for Data Science/Machine Learning, and SDETs, with batches of professionals in each program.

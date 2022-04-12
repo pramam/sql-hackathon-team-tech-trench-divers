@@ -58,7 +58,7 @@ Insert into department values(6,21,'Hardware');
 
 **Let's see an example** 
 
-In the below example , the transaction will Update Employee Salary and Select the data.
+In the below example Query , the transaction will Update Employee Salary and Select the data.
 
 ~~~
 Begin;
@@ -74,28 +74,28 @@ where e.emp_id=1;
 Commit;
 ~~~
 
-Steps to execute the transaction above,
+Let's see the steps to execute the transaction above,
 
-**Step 1:**
+**Step 1: Execute the BEGIN statement**
 
 ![update and select](./images/begin.png)
 
-**Step 2:**
+**Step 2: Execute both Update and Select Queries**
 
 ![update and select](./images/transaction.png)
 
-**Step 3:**
+**Step 3: Execute ROLLBACK statement if you want to undo the changes.**
+
+![update and select](./images/rollback-2.png)
+
+**(or) execute COMMIT to complete the transaction(after commit rollback cannot be done**
 
 ![update and select](./images/commit.png)
 
-![update and select](./images/update.png)
+**All the statements put together looks like below**
 
+![update and select](./images/puttogether.png)
 
-After executing the COMMIT statement, PostgreSQL also guarantees that the change will be durable.
-
-In the below example , Rollback will undo the change of current transaction. 
-
-![update and select](./images/rollback.1.png)
 
 This is how the transaction block works using BEGIN , COMMIT , ROLLBACK. 
 

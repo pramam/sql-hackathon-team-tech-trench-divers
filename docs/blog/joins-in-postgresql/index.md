@@ -2,7 +2,7 @@
 
 Join is used to combine data or rows from one or more tables based on a common field between them. These common fields are generally the Primary key of the first table and Foreign key of other tables.
 
-**There are 4 types of joins in PostgreSQL:-**
+**There are 5 types of joins in PostgreSQL:-**
 
 1.Inner Join
 
